@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="
+      http://www.springframework.org/schema/beans 
+      http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- beans here -->
+	<bean id="formationDao" class="fr.zaroumia.formation.spring.dao.FormationDaoImpl"></bean>
+
+	<bean id="formationService"
+		class="fr.zaroumia.formation.spring.service.FormationServiceImpl" c:formationDao-ref="formationDao" c:etablissement="zaroumia">
+		
+	</bean>
+</beans>

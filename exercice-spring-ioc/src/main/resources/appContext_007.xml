@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="
+      http://www.springframework.org/schema/beans 
+      http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="fr.zaroumia.formation.spring._007.Bean007">
+		<property name="entier" value="10"></property>
+		<property name="reel" value="10.5"></property>
+		<property name="chaine" value="maChaine"></property>
+		<property name="booleen" value="true"></property>
+		<property name="caractere" value="A"></property>
+		<property name="properties">
+			<value>
+				profile=dev
+				version=0.0.1
+			</value>
+		</property>
+		<property name="localisation" value="fr_FR"></property>
+		<property name="url" value="https://spring.io/"></property>
+		<property name="fichier" value="D:\Projects\workspace\formation-spring"></property>
+		<property name="tableauBytes" value="valeur"></property>
+		<property name="tableauChaines" value="chaine1,chaine2"></property>
+		<property name="map">
+			<map>
+				<entry key="cle1" value="valeur1"></entry>
+				<entry key="cle2" value="valeur2"></entry>
+			</map>
+		</property>
+		<property name="list">
+			<list>
+				<value>valeur1</value>
+				<value>valeur2</value>
+			</list>
+		</property>
+		<property name="set">
+			<set>
+				<value>valeur1</value>
+				<value>valeur2</value>
+			</set>
+		</property>
+	</bean>
+</beans>

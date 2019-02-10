@@ -1,0 +1,4 @@
+INSERT INTO formations VALUES (1, 'Spring Framework: étape par étape pour devenir professionnel', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut eros accumsan, tempus justo id, feugiat felis. Nullam pretium velit urna, dictum aliquam augue mattis sed. Maecenas eu magna volutpat. ');
+INSERT INTO formations VALUES (2, 'Hibernate Framework: étape par étape pour devenir professionnel', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut eros accumsan, tempus justo id, feugiat felis. Nullam pretium velit urna, dictum aliquam augue mattis sed. Maecenas eu magna volutpat. ');
+INSERT INTO formations VALUES (3, 'Maven Framework: étape par étape pour devenir professionnel', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut eros accumsan, tempus justo id, feugiat felis. Nullam pretium velit urna, dictum aliquam augue mattis sed. Maecenas eu magna volutpat. ');
+

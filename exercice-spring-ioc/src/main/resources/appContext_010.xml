@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+      http://www.springframework.org/schema/beans 
+      http://www.springframework.org/schema/beans/spring-beans.xsd 
+      http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/util
+http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- Lire un fichier properties en utilisant la balise bean -->
+<!-- 	<bean -->
+<!-- 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"> -->
+<!-- 		<property name="locations" value="classpath:database.properties"></property> -->
+<!-- 	</bean> -->
+	<!-- Lire un fichier properties en utilisant le namespace context -->
+	<context:property-placeholder location="classpath:database.properties"/>
+
+	<!-- création d'un bean -->
+	<bean class="fr.zaroumia.formation.spring._010.DataBaseProperties">
+		<property name="driverClassName" value="${driverClassName}"></property>
+		<property name="url" value="${url}"></property>
+		<property name="username" value="${username}"></property>
+		<property name="password" value="${password}"></property>
+
+	</bean>
+
+
+
+</beans>

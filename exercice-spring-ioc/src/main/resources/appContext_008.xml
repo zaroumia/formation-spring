@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="
+      http://www.springframework.org/schema/beans 
+      http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- le bean singleton ici -->
+	<bean id="singleton" class="fr.zaroumia.formation.spring._008.MaClasseSingleton" factory-method="getInstance"></bean>
+
+	<!-- le bean factory ici -->
+	<bean id="factory" class="fr.zaroumia.formation.spring._008.Factory"></bean>
+
+	<!-- le bean crée par le beanFactory ici -->
+	<bean id="unBean" factory-bean="factory" factory-method="create"></bean>
+</beans>

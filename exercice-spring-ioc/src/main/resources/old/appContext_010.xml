@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+      http://www.springframework.org/schema/beans 
+      http://www.springframework.org/schema/beans/spring-beans.xsd 
+      http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/util
+http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- beans here -->
+	<!-- <bean -->
+	<!-- class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"> -->
+	<!-- <property name="locations" value="classpath:database.properties" /> -->
+	<!-- </bean> -->
+
+	<!-- <context:property-placeholder location="classpath:database.properties" 
+		/> -->
+
+	<!-- <bean id="dataBaseProperties" class="fr.zaroumia.formation.spring._010.DataBaseProperties"> -->
+	<!-- <property name="driverClassName" value="${driverClassName}" /> -->
+	<!-- <property name="url" value="${url}" /> -->
+	<!-- <property name="username" value="${username}" /> -->
+	<!-- <property name="password" value="${password}" /> -->
+	<!-- </bean> -->
+
+
+	<util:properties id="dbProp"
+		location="classpath:database.properties" />
+
+	<bean id="dataBaseProperties" class="fr.zaroumia.formation.spring._010.DataBaseProperties">
+		<property name="driverClassName" value="#{dbProp.driverClassName}" />
+		<property name="url" value="#{dbProp.url}" />
+		<property name="username" value="#{dbProp.username}" />
+		<property name="password" value="#{dbProp.password}" />
+	</bean>
+
+
+
+</beans>
