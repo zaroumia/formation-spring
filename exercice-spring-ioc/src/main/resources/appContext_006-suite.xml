@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+      http://www.springframework.org/schema/beans 
+      http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- beans here -->
+	<bean id="formationDao_A" class="fr.zaroumia.formation.spring.dao.FormationDaoAImpl"></bean>
+	<alias name="formationDao_A" alias="formationDao_B"/>
+
+	<!-- 100 beans utilisent le bean formationDAO_A -->
+	<bean class="fr.zaroumia.formation.spring.service.FormationServiceImpl"
+		p:formationDao-ref="formationDao_A" p:etablissement="zaroumia">
+	</bean>
+	<bean class="fr.zaroumia.formation.spring.service.FormationServiceImpl"
+		p:formationDao-ref="formationDao_A" p:etablissement="zaroumia">
+	</bean>
+	<bean class="fr.zaroumia.formation.spring.service.FormationServiceImpl"
+		p:formationDao-ref="formationDao_A" p:etablissement="zaroumia">
+	</bean>
+	<bean class="fr.zaroumia.formation.spring.service.FormationServiceImpl"
+		p:formationDao-ref="formationDao_A" p:etablissement="zaroumia">
+	</bean>
+	<bean class="fr.zaroumia.formation.spring.service.FormationServiceImpl"
+		p:formationDao-ref="formationDao_A" p:etablissement="zaroumia">
+	</bean>
+	<bean class="fr.zaroumia.formation.spring.service.FormationServiceImpl"
+		p:formationDao-ref="formationDao_A" p:etablissement="zaroumia">
+	</bean>
+	<bean class="fr.zaroumia.formation.spring.service.FormationServiceImpl"
+		p:formationDao-ref="formationDao_A" p:etablissement="zaroumia">
+	</bean>
+	<bean class="fr.zaroumia.formation.spring.service.FormationServiceImpl"
+		p:formationDao-ref="formationDao_A" p:etablissement="zaroumia">
+	</bean>
+
+
+
+	<!-- 100 beans utilisent le bean formationDAO_B -->
+	<bean class="fr.zaroumia.formation.spring.service.FormationServiceImpl"
+		p:formationDao-ref="formationDao_B" p:etablissement="zaroumia">
+	</bean>
+	<bean class="fr.zaroumia.formation.spring.service.FormationServiceImpl"
+		p:formationDao-ref="formationDao_B" p:etablissement="zaroumia">
+	</bean>
+	<bean class="fr.zaroumia.formation.spring.service.FormationServiceImpl"
+		p:formationDao-ref="formationDao_B" p:etablissement="zaroumia">
+	</bean>
+	<bean class="fr.zaroumia.formation.spring.service.FormationServiceImpl"
+		p:formationDao-ref="formationDao_B" p:etablissement="zaroumia">
+	</bean>
+	<bean class="fr.zaroumia.formation.spring.service.FormationServiceImpl"
+		p:formationDao-ref="formationDao_B" p:etablissement="zaroumia">
+	</bean>
+	<bean class="fr.zaroumia.formation.spring.service.FormationServiceImpl"
+		p:formationDao-ref="formationDao_B" p:etablissement="zaroumia">
+	</bean>
+	<bean class="fr.zaroumia.formation.spring.service.FormationServiceImpl"
+		p:formationDao-ref="formationDao_B" p:etablissement="zaroumia">
+	</bean>
+	<bean class="fr.zaroumia.formation.spring.service.FormationServiceImpl"
+		p:formationDao-ref="formationDao_B" p:etablissement="zaroumia">
+	</bean>
+
+
+</beans>
