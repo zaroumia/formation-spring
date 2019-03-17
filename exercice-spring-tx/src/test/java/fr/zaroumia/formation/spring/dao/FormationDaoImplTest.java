@@ -7,9 +7,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.annotation.Commit;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.annotation.DirtiesContext.ClassMode;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.jdbc.Sql;
@@ -35,7 +35,7 @@ public class FormationDaoImplTest {
 
 	@Test
 	@Transactional
-	@Commit
+	@Rollback
 	public void should1FindNewlyCreatedFormation() {
 		Formation formation = new Formation(4l, "nouvelle formation", "un descriptif");
 		beanUnderTest.create(formation);
