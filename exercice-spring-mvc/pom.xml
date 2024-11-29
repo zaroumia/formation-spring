@@ -27,7 +27,7 @@
 	<properties>
 		<slf4j.version>1.6.1</slf4j.version>
 		<target.jdk>1.8</target.jdk>
-		<junit.version>4.12</junit.version>
+		<junit.version>4.13.1</junit.version>
 		<spring.version>4.3.11.RELEASE</spring.version>
 		<assertj.version>3.5.2</assertj.version>
 	</properties>
